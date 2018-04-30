@@ -25,6 +25,11 @@ def setServoValue(channel, value):
   pwm.setPWM(channel, 0, value)
   log("Setting channel " + str(channel) + " to " + str(value))
   return
+
+def openMouthPercent(percent):
+  openValue = servoMin + 120
+  closedValue = servoMin
+  setServoValue(mouthChannel, closedValue + (openValue - closedValue) * percent)
   
 def setMouthOpen(o = True):
   if o:
