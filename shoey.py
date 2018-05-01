@@ -11,7 +11,7 @@ servoMin = 150
 servoMax = 700
 servoMid = servoMin + (servoMax - servoMin) / 2
 
-debug = True
+debug = False
 
 mouthChannel = 0
 headChannel = 4
@@ -29,7 +29,8 @@ def setServoValue(channel, value):
 def openMouthPercent(percent):
   openValue = servoMin + 120
   closedValue = servoMin
-  setServoValue(mouthChannel, closedValue + (openValue - closedValue) * percent)
+  targetValue = closedValue + int((openValue - closedValue) * percent)
+  setServoValue(mouthChannel, targetValue)
   
 def setMouthOpen(o = True):
   if o:

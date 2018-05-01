@@ -11,10 +11,10 @@ fol = Follower(sf, freq=30)
 
 def snapshot():
     val = fol.get()
-    print "amplitude: %.2f" % (val)
+#    print "amplitude: %.2f" % (val)
     openMouthPercent(val)
 
 pat = Pattern(snapshot, time=.01).play()
 
 # Opens the server graphical interface.
-s.gui(locals())
+# s.gui(locals())
