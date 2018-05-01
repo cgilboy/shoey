@@ -76,8 +76,8 @@ print "For shoeth!"
 
 wiggleInDirection(W_CENTER)
 
-while (True):
-  laugh()
-  time.sleep(3)
-  print "Looping!"
+# while (True):
+#   laugh()
+#   time.sleep(3)
+#   print "Looping!"
 
